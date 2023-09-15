@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+
+:root {
+    --primary_color: #ffffff;
+    --secondary_color: #240046;
+    --third_color: #ffb703;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.encabezado {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    padding: 1rem;
+    height: 10vh;
+    width: 100%;
+}
+
+.encabezado-logo {
+    color: var(--primary_color);
+    font-size: 3rem;
+}
+
+.encabezado-logo span {
+    display: block;
+    font-size: 2rem;
+}
+
+.encabezado-nav {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.encabezado-nav a {
+    color: var(--primary_color);
+    text-decoration: none;
+    margin-left: 3rem;
+    transition: 1s;
+}
+
+.encabezado-nav a:hover {
+    color: var(--third_color);
+}
+
+.banner {
+    background-image: url("./banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    color: var(--primary_color);
+    height: 100vh;
+    width: 100%;
+}
+
+.banner-principal {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.banner-titulo {
+    font-size: 4rem;
+}
+
+.banner-ubicacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.banner-boton {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary_color);
+    font-size: 2.5rem;
+    border: 2px solid var(--primary_color);
+    border-radius: 1rem;
+    text-decoration: none;
+    width: 40rem;
+    height: 5rem;
+    margin: 1rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.banner-boton::before{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    background: var(--third_color);
+    height: 100%;
+    width: 0;
+    transition: 2s;
+    z-index: -1;
+}
+
+.banner-boton:hover::before{
+    width: 100%;
+}
+
+.mision {
+    display: flex;
+    height: 100vh;
+    padding: 1rem;
+}
+
+.mision-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mision-titulo {
+    font-size: 4rem;
+}
+
+.mision-parrafo {
+    font-size: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+.vision {
+    background: black;
+    display: flex;
+    color: var(--primary_color);
+    height: 100vh;
+}
+
+.vision-imagen {
+    background: url("./tortuga.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 60%;
+}
+
+.vision-principal {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+    width: 40%;
+    padding: 10rem;
+}
+
+.vision-titulo {
+    font-size: 4rem;
+}
+
+.vision-parrafo {
+    font-size: 2rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.objetivo {
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10rem;
+}
+
+.objetivo-titulo {
+    font-size: 4rem;
+}
+
+.objetivo-parrafo {
+    font-size: 2rem;
+    margin: 1rem 0 3.5rem 0rem;
+}
+
+.objetivo-contenedor {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tarjeta {
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 3rem;
+    width: 30%;
+    min-width: 30rem;
+    flex-shrink: s;
+    overflow: hidden;
+}
+
+.tarjeta-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--secondary_color);
+    color: var(--primary_color);
+    height: 30rem;
+    width: 100%;
+}
+
+.tarjeta-titulo h2 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.tarjeta-parrafo {
+    background: var(--third_color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-weight: 600;
+    height: 18rem;
+    padding: 2rem;
+}
+
+.pie {
+    background: black;
+    text-align: center;
+    color: var(--primary_color);
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .encabezado-nav {
+        display: none;
+    }
+
+    .banner-titulo, .banner-ubicacion p {
+        text-align: center;
+    }
+
+    .banner-ubicacion svg {
+        display: none;
+    }
+
+    .banner-boton {
+        font-size: 2rem;
+        width: 20rem;
+    }
+
+    .mision {
+        height: 80vh;
+    }
+
+    .mision svg{
+
+        height: 10rem;
+    }
+
+    .mision-titulo, .vision-titulo, .objetivo-titulo {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .mision-parrafo, .vision-parrafo, .objetivo-parrafo {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .vision {
+        flex-direction: column;
+    }
+
+    .vision-imagen {
+        height: 50vh;
+        width: 100%;
+    }
+
+    .vision-principal {
+        width: 100%;
+    }
+
+    .objetivo {
+        align-items: center;
+        height: 100%;
+    }
+
+    .objetivo-contenedor {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .tarjeta {
+        width: 60%;
+        margin: 2rem 0;
+    }
+}
